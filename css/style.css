@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  width: 600px;
+}
+.container .header {
+  text-align: center;
+  background: linear-gradient(#8e1818, hsl(0, 81%, 27%));
+  color: #fff;
+  padding: 15px 40px 30px;
+  font-size: 18px;
+}
+.container .header h2 {
+  margin: 10px;
+  font-size: 35px;
+}
+input {
+  width: 75%;
+  float: left;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+.addBtn {
+  width: 25%;
+  cursor: pointer;
+  float: right;
+  border: none;
+  background-color: #d9d9d9;
+  color: #555;
+  padding: 10px;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+.addBtn:hover {
+  background-color: #bbb;
+}
+.container .header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container .taskList {
+  max-height: 300px;
+  overflow-y: auto;
+}
+.taskList {
+  list-style-type: none;
+}
+.taskList li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: all 0.3s;
+  user-select: none;
+}
+.taskList li:hover {
+  background: #888;
+}
+.taskList li .closeBtn {
+  display: none;
+  position: absolute;
+  right: 15px;
+}
+.taskList li:hover .closeBtn {
+  display: inline-block;
+  transition: all 0.3s;
+}
+.taskList li .closeBtn:hover {
+  color: #c90000;
+  transform: scale(1.2);
+}
+.taskList .done {
+  color: #fff;
+  background-color: #888;
+  text-decoration: line-through;
+}
+.taskList .done::before {
+  content: "\01F5F9";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: #fff;
+}
